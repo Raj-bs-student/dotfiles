@@ -124,13 +124,13 @@ def update [] {
 # ---------------------------------------------------------------------
 
 # Create a directory and change into it
-def mcd [name: string] {
+def --env mcd [name: string] {
   mkdir $name
   cd $name
 }
 
 # Start a simple web server in the current directory
-def server [port: int = 8080] {
+def --env server [port: int = 8080] {
   python -m http.server $port
 }
 
@@ -143,3 +143,25 @@ def lg [] {
 def lzd [] {
   lazydocker
 }
+
+# ---------------------------------------------------------------------
+# Fuzzy search directory change
+# ---------------------------------------------------------------------
+
+def --env cdf [] {
+  let dir = fd --type d | fzf
+  if not ($dir | is-empty) {
+    cd $dir
+  }
+}
+
+$env.config.keybindings ++= [{
+    name: "cdf",
+    modifier: "alt",
+    keycode: "char_c",
+    mode: "emacs",
+    event: {
+        send: "executehostcommand",
+        cmd: "cdf"
+    }
+}]
