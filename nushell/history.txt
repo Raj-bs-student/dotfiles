@@ -1,0 +1,634 @@
+clear
+sudo ufw enable
+sudo systemctl enable  ufw
+sudo systemctl enable  ufw --now
+sudo systemctl enable --now ufw 
+sudo pacman -S linux-hardened linux-hardened-headers
+sudo nvim /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+clear
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo enable --now apparmor
+sudo systemctl enable --now apparmor
+clear
+sudo systemctl enable --now audit
+yay -S audit
+sudo systemctl enable --now audit
+sudo systemctl enable  auditd
+sudo systemctl enable --now auditd
+cat /sys/module/apparmor/parameters/enabled
+reboot
+ls
+clear
+nvim .config/baloofileinformationrc
+yay -Ss lazyssh
+paru -Ss lazyssh
+clear
+sudo nvim /etc/pacman.conf
+sudo pacman -Syyu
+clear
+ls
+cd .config/nushell/
+ls
+zoxide init nushell | save -f ~/.zoxide.nu<\n>
+ls
+la
+ls
+clear
+ls -al
+zoxide init nushell | save -f .zoxide.nu<\n>
+cd .config/nushell/
+clear
+cd nu
+clear
+cd 
+cd nu
+clear
+cd Downloads/
+cd 
+cd Downloads/
+cd 
+cd Down
+z donw
+z Downloads/
+z 
+sudo pacman -Syyu
+pwck  # Checks integrity<\n>grpck<\n>
+sudo pwck
+yay -Ss lazyssh
+sudo pacman -Su
+paru -Ss lazyssh
+sudo systemctl stop ufw
+sudo systemctl status\ ufw
+sudo systemctl status ufw
+yay -Ss lazyssh
+yay -Syyu
+yay -Ss envx
+paru -Syyu
+clear
+reboot
+clear
+nvim .config/baloofileinformationrc
+lazygit
+ls
+cd .gitconfig
+nvim .gitconfig
+rm -rf sekiro_grub_theme/
+rm -rf test
+clear
+cd Downloads/
+cd
+cd Down
+clear
+zsh
+bash
+zi
+cdi
+cargo install ripgrep
+yay -S fd-find
+cargo install fd-find
+lazydocker
+cle3ar
+clear
+rg
+clear
+rg
+fs
+fd
+clear
+rg
+update
+bat
+bat .config/chrome-flags.conf
+cleaar
+zi
+cdi
+ls
+clear
+nvim .config/nushell/config.nu
+clear
+cd .config/nushell/
+ls
+nvim catppuccin_mocha.nu
+source .config/nushell/catppuccin_mocha.nu
+clear
+nvim config.nu
+cd ../kitty/
+ls
+nvim kitty.conf
+# Define the base theme colors<\n>let theme = {<\n>  rosewater: "#f5e0dc"<\n>  flamingo: "#f2cdcd"<\n>  pink: "#f5c2e7"<\n>  mauve: "#cba6f7"<\n>  red: "#f38ba8"<\n>  maroon: "#eba0ac"<\n>  peach: "#fab387"<\n>  yellow: "#f9e2af"<\n>  green: "#a6e3a1"<\n>  teal: "#94e2d5"<\n>  sky: "#89dceb"<\n>  sapphire: "#74c7ec"<\n>  blue: "#89b4fa"<\n>  lavender: "#b4befe"<\n>  text: "#cdd6f4"<\n>  subtext1: "#bac2de"<\n>  subtext0: "#a6adc8"<\n>  overlay2: "#9399b2"<\n>  overlay1: "#7f849c"<\n>  overlay0: "#6c7086"<\n>  surface2: "#585b70"<\n>  surface1: "#45475a"<\n>  surface0: "#313244"<\n>  base: "#1e1e2e"<\n>  mantle: "#181825"<\n>  crust: "#11111b"<\n>}<\n><\n># Define the scheme with references to $theme<\n>let scheme = {<\n>  recognized_command: $theme.blue<\n>  unrecognized_command: $theme.text<\n>  constant: $theme.peach<\n>  punctuation: $theme.overlay2<\n>  operator: $theme.sky<\n>  string: $theme.green<\n>  virtual_text: $theme.surface2<\n>  variable: { fg: $theme.flamingo attr: i }<\n>  filepath: $theme.yellow<\n>}<\n><\n># Apply to color_config (merge with any existing config if needed)<\n>$env.config = {<\n>  # Your other config settings here...<\n><\n>  color_config: {<\n>    separator: { fg: $theme.surface2 attr: b }<\n>    leading_trailing_space_bg: { fg: $theme.lavender attr: u }<\n>    header: { fg: $theme.text attr: b }<\n>    row_index: $scheme.virtual_text<\n>    record: $theme.text<\n>    list: $theme.text<\n>    hints: $scheme.virtual_text<\n>    search_result: { fg: $theme.base bg: $theme.yellow }<\n>    shape_closure: $theme.teal<\n>    shape_flag: { fg: $theme.maroon attr: i }<\n>    shape_matching_brackets: { attr: u }<\n>    shape_garbage: $theme.red<\n>    shape_keyword: $theme.mauve<\n>    shape_match_pattern: $theme.green<\n>    shape_signature: $theme.teal<\n>    shape_table: $scheme.punctuation<\n>    cell-path: $scheme.punctuation<\n>    shape_list: $scheme.punctuation<\n>    shape_record: $scheme.punctuation<\n>    shape_vardecl: $scheme.variable<\n>    shape_variable: $scheme.variable<\n>    empty: { attr: n }<\n>    filesize: {||<\n>      if $in < 1kb {<\n>        $theme.teal<\n>      } else if $in < 10kb {<\n>        $theme.green<\n>      } else if $in < 100kb {<\n>        $theme.yellow<\n>      } else if $in < 10mb {<\n>        $theme.peach<\n>      } else if $in < 100mb {<\n>        $theme.maroon<\n>      } else if $in < 1gb {<\n>        $theme.red<\n>      } else {<\n>        $theme.mauve<\n>      }<\n>    }<\n>    duration: {||<\n>      if $in < 1day {<\n>        $theme.teal<\n>      } else if $in < 1wk {<\n>        $theme.green<\n>      } else if $in < 4wk {<\n>        $theme.yellow<\n>      } else if $in < 12wk {<\n>        $theme.peach<\n>      } else if $in < 24wk {<\n>        $theme.maroon<\n>      } else if $in < 52wk {<\n>        $theme.red<\n>      } else {<\n>        $theme.mauve<\n>      }<\n>    }<\n>    date: {|| (date now) - $in |<\n>      if $in < 1day {<\n>        $theme.teal<\n>      } else if $in < 1wk {<\n>        $theme.green<\n>      } else if $in < 4wk {<\n>        $theme.yellow<\n>      } else if $in < 12wk {<\n>        $theme.peach<\n>      } else if $in < 24wk {<\n>        $theme.maroon<\n>      } else if $in < 52wk {<\n>        $theme.red<\n>      } else {<\n>        $theme.mauve<\n>      }<\n>    }<\n>    shape_external: $scheme.unrecognized_command<\n>    shape_internalcall: $scheme.recognized_command<\n>    shape_external_resolved: $scheme.recognized_command<\n>    shape_block: $scheme.recognized_command<\n>    shape_custom: $theme.pink<\n>    background: $theme.base<\n>    foreground: $theme.text<\n>    cursor: { bg: $theme.rosewater fg: $theme.base }<\n>    shape_range: $scheme.operator<\n>    range: $scheme.operator<\n>    shape_pipe: $scheme.operator<\n>    shape_operator: $scheme.operator<\n>    shape_redirection: $scheme.operator<\n>    glob: $scheme.filepath<\n>    shape_directory: $scheme.filepath<\n>    shape_filepath: $scheme.filepath<\n>    shape_glob_interpolation: $scheme.filepath<\n>    shape_globpattern: $scheme.filepath<\n>    shape_int: $scheme.constant<\n>    int: $scheme.constant<\n>    bool: $scheme.constant<\n>    float: $scheme.constant<\n>    nothing: $scheme.constant<\n>    binary: $scheme.constant<\n>    shape_nothing: $scheme.constant<\n>    shape_bool: $scheme.constant<\n>    shape_float: $scheme.constant<\n>    shape_binary: $scheme.constant<\n>    shape_datetime: $scheme.constant<\n>    shape_literal: $scheme.constant<\n>    string: $scheme.string<\n>    shape_string: $scheme.string<\n>    shape_string_interpolation: $theme.flamingo<\n>    shape_raw_string: $scheme.string<\n>    shape_externalarg: $scheme.string<\n>  }<\n><\n>  highlight_resolved_externals: true<\n><\n>  explore: {<\n>    status_bar_background: { fg: $theme.text bg: $theme.mantle }<\n>    command_bar_text: { fg: $theme.text }<\n>    highlight: { fg: $theme.base bg: $theme.yellow }<\n>    status: {<\n>      error: $theme.red<\n>      warn: $theme.yellow<\n>      info: $theme.blue<\n>    }<\n>    selected_cell: { bg: $theme.blue fg: $theme.base }<\n>  }<\n><\n>  # Your other config settings here...<\n>}<\n>
+clear
+exit
+# Define the base theme colors<\n>let theme = {<\n>  rosewater: "#f5e0dc"<\n>  flamingo: "#f2cdcd"<\n>  pink: "#f5c2e7"<\n>  mauve: "#cba6f7"<\n>  red: "#f38ba8"<\n>  maroon: "#eba0ac"<\n>  peach: "#fab387"<\n>  yellow: "#f9e2af"<\n>  green: "#a6e3a1"<\n>  teal: "#94e2d5"<\n>  sky: "#89dceb"<\n>  sapphire: "#74c7ec"<\n>  blue: "#89b4fa"<\n>  lavender: "#b4befe"<\n>  text: "#cdd6f4"<\n>  subtext1: "#bac2de"<\n>  subtext0: "#a6adc8"<\n>  overlay2: "#9399b2"<\n>  overlay1: "#7f849c"<\n>  overlay0: "#6c7086"<\n>  surface2: "#585b70"<\n>  surface1: "#45475a"<\n>  surface0: "#313244"<\n>  base: "#1e1e2e"<\n>  mantle: "#181825"<\n>  crust: "#11111b"<\n>}<\n><\n># Define the scheme with references to $theme<\n>let scheme = {<\n>  recognized_command: $theme.blue<\n>  unrecognized_command: $theme.text<\n>  constant: $theme.peach<\n>  punctuation: $theme.overlay2<\n>  operator: $theme.sky<\n>  string: $theme.green<\n>  virtual_text: $theme.surface2<\n>  variable: { fg: $theme.flamingo attr: i }<\n>  filepath: $theme.yellow<\n>}<\n><\n># Apply to color_config (merge with any existing config if needed)<\n>$env.config = {<\n>  # Your other config settings here...<\n><\n>  color_config: {<\n>    separator: { fg: $theme.surface2 attr: b }<\n>    leading_trailing_space_bg: { fg: $theme.lavender attr: u }<\n>    header: { fg: $theme.text attr: b }<\n>    row_index: $scheme.virtual_text<\n>    record: $theme.text<\n>    list: $theme.text<\n>    hints: $scheme.virtual_text<\n>    search_result: { fg: $theme.base bg: $theme.yellow }<\n>    shape_closure: $theme.teal<\n>    shape_flag: { fg: $theme.maroon attr: i }<\n>    shape_matching_brackets: { attr: u }<\n>    shape_garbage: $theme.red<\n>    shape_keyword: $theme.mauve<\n>    shape_match_pattern: $theme.green<\n>    shape_signature: $theme.teal<\n>    shape_table: $scheme.punctuation<\n>    cell-path: $scheme.punctuation<\n>    shape_list: $scheme.punctuation<\n>    shape_record: $scheme.punctuation<\n>    shape_vardecl: $scheme.variable<\n>    shape_variable: $scheme.variable<\n>    empty: { attr: n }<\n>    filesize: {||<\n>      if $in < 1kb {<\n>        $theme.teal<\n>      } else if $in < 10kb {<\n>        $theme.green<\n>      } else if $in < 100kb {<\n>        $theme.yellow<\n>      } else if $in < 10mb {<\n>        $theme.peach<\n>      } else if $in < 100mb {<\n>        $theme.maroon<\n>      } else if $in < 1gb {<\n>        $theme.red<\n>      } else {<\n>        $theme.mauve<\n>      }<\n>    }<\n>    duration: {||<\n>      if $in < 1day {<\n>        $theme.teal<\n>      } else if $in < 1wk {<\n>        $theme.green<\n>      } else if $in < 4wk {<\n>        $theme.yellow<\n>      } else if $in < 12wk {<\n>        $theme.peach<\n>      } else if $in < 24wk {<\n>        $theme.maroon<\n>      } else if $in < 52wk {<\n>        $theme.red<\n>      } else {<\n>        $theme.mauve<\n>      }<\n>    }<\n>    date: {|| (date now) - $in |<\n>      if $in < 1day {<\n>        $theme.teal<\n>      } else if $in < 1wk {<\n>        $theme.green<\n>      } else if $in < 4wk {<\n>        $theme.yellow<\n>      } else if $in < 12wk {<\n>        $theme.peach<\n>      } else if $in < 24wk {<\n>        $theme.maroon<\n>      } else if $in < 52wk {<\n>        $theme.red<\n>      } else {<\n>        $theme.mauve<\n>      }<\n>    }<\n>    shape_external: $scheme.unrecognized_command<\n>    shape_internalcall: $scheme.recognized_command<\n>    shape_external_resolved: $scheme.recognized_command<\n>    shape_block: $scheme.recognized_command<\n>    shape_custom: $theme.pink<\n>    background: $theme.base<\n>    foreground: $theme.text<\n>    cursor: { bg: $theme.rosewater fg: $theme.base }<\n>    shape_range: $scheme.operator<\n>    range: $scheme.operator<\n>    shape_pipe: $scheme.operator<\n>    shape_operator: $scheme.operator<\n>    shape_redirection: $scheme.operator<\n>    glob: $scheme.filepath<\n>    shape_directory: $scheme.filepath<\n>    shape_filepath: $scheme.filepath<\n>    shape_glob_interpolation: $scheme.filepath<\n>    shape_globpattern: $scheme.filepath<\n>    shape_int: $scheme.constant<\n>    int: $scheme.constant<\n>    bool: $scheme.constant<\n>    float: $scheme.constant<\n>    nothing: $scheme.constant<\n>    binary: $scheme.constant<\n>    shape_nothing: $scheme.constant<\n>    shape_bool: $scheme.constant<\n>    shape_float: $scheme.constant<\n>    shape_binary: $scheme.constant<\n>    shape_datetime: $scheme.constant<\n>    shape_literal: $scheme.constant<\n>    string: $scheme.string<\n>    shape_string: $scheme.string<\n>    shape_string_interpolation: $theme.flamingo<\n>    shape_raw_string: $scheme.string<\n>    shape_externalarg: $scheme.string<\n>  }<\n><\n>  highlight_resolved_externals: true<\n><\n>  explore: {<\n>    status_bar_background: { fg: $theme.text bg: $theme.mantle }<\n>    command_bar_text: { fg: $theme.text }<\n>    highlight: { fg: $theme.base bg: $theme.yellow }<\n>    status: {<\n>      error: $theme.red<\n>      warn: $theme.yellow<\n>      info: $theme.blue<\n>    }<\n>    selected_cell: { bg: $theme.blue fg: $theme.base }<\n>  }<\n><\n>  # Your other config settings here...<\n>}<\n>
+ls
+clear
+ls
+la
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+nu-check 
+ls
+clear
+ls
+clear
+ls
+ls -al
+ls
+nvim .config/nushell/config.nu
+cd .config/kitty
+ls
+la
+nvim *
+clear
+ls
+kitty --debug-config
+kitty --debug
+kitty --debug config
+kitty --debug-config
+kitty --help
+kitty --debug-rendering
+ls
+clear
+ls
+clear
+kitty
+echo $TERMINAL
+echo $env.TERMINAL
+kitty -1
+nvim .config/nushell/config.nu
+ls
+clear
+ls
+clear
+ls
+clear
+gemini
+ls
+clear
+ls
+cler
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+nvim .config/nushell/config.nu
+tui nvim
+tui
+tui nvim
+clear
+ls
+clear
+ls
+clear
+ls
+tui nvim
+ls
+clear
+ls
+clear
+ls
+clear
+nvim
+ls /tmp/mykitty
+ls
+ls /tmp/mykitty
+kitty
+yay -S kitty
+yay -Ss kitty
+kitty -1
+clear
+sudo sysctl kernel.unprivileged_userns_clone=1
+clear
+nvimi
+nvim
+nvim .config/kitty/kitty.conf
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+nvim .config/kitty/kitty.conf
+git clone https://github.com/semimqmo/sekiro_grub_theme
+cd sekiro_grub_theme/
+ls
+clear
+sudo chmod +x ./install.sh
+sudo ./install.sh
+sudo nvim /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+reboot
+sudo sysctl kernel.unprivileged_userns_clone=1
+lsblk -f
+lsblk -f >> clipboard
+lsblk -f > clipboard
+lsblk -f | clipboard
+lsblk -f 
+clear
+sudo mkdir -p /boot/grub/themes
+clear
+sudo cp -r /usr/share/grub/themes/Sekiro /boot/grub/themes/
+sudo nvim /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRU
+sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+reboot
+sudo sysctl kernel.unprivileged_userns_clone=1
+sudo passwd root
+clear
+cd Downloads/
+ls
+mkdir -p Pictures/Wallpapers
+mkdir  Pictures/Wallpapers
+mv * ../Pictures/Wallpapers/
+cd hypr/hyprland
+cd .config/hypr/hyprland/
+clear
+nvim .config/starship.toml
+mv .config/starship.toml .config/starship.toml.bak; mv ~/Downloads/jetpack.toml .config/starship.toml
+clear
+ls
+clear
+ls
+clear
+cd Downloads
+ls
+clear
+ls
+clear
+ls
+pwd
+clear
+starship preset jetpack -o ~/.config/starship.toml
+ls
+clear
+cd Desktop/
+cd 
+cd .config
+cd hypr
+ls
+clear
+ls
+cd ..
+cd .config/starship.toml
+ls
+clear
+sudo 
+clear
+sudo nvim
+clear
+cd
+clear
+exit
+su 
+clear
+ls
+clear
+cd .config/starship.toml
+cd .config
+nvim .config/starship.toml
+clear
+ls
+clear
+ls
+clear
+cd .config
+clear
+cd .config
+ls
+clear
+ls
+gemini
+clear
+cd .config/hypr/hyprland/
+clear
+cd .config/hypr/hyprland/
+l
+clear; ls
+rm -rf .config/hypr/hyprland/scripts/floating_terminal.sh
+clear
+cat /tmp/hypr/$(hyprctl instances | grep "instance" | awk '{print $2}' | sed 's/://')*.log
+journalctl --user -u hyprland -e
+gemini
+ls
+clear
+zoxide edit
+clear
+.config
+clear
+ls
+clear
+cd
+clear
+docker
+clear
+ls
+clear
+ps
+clear
+cd .config/hypr/hyprland/
+clear
+yay -S atuin
+nvim .config/nushell/config.nu
+atuin init nu | save -f ~/.cache/atuin/init.nu
+touch .cache/atuin/init.nu
+mkdir .cache/atuin
+atuin init nu | save -f ~/.cache/atuin/init.nu
+atuin import nu<\n>
+clear
+atuin init nu | save -f ~/.cache/atuin/init.nu
+clear
+ls
+clear
+ls
+cleqr
+clear
+gemini
+fzf | nvim
+:q
+clear
+ls | fzf | nvim
+clear
+pacman -S ghostty
+sudo pacman -S ghostty
+cd .config/ghostty/config
+nvim .config/ghostty/config
+clear
+ls
+cd /usr/share/ghostty/themes/
+ls
+clear
+fzf
+ls | fzf
+clear
+clea
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ghostty
+ghostty --title floating-terminal
+ghostty --title "floating-terminal"
+ghostty --title="floating-terminal"
+nvim .config/hypr/hyprland/keybinds.conf
+nvim .config/hypr/hyprland/rules.conf
+clear
+ls
+clear
+ls
+cd .config/ghostty/config
+cd .confi
+clear
+ls
+clear
+fuck
+clear
+ls
+clear
+ls
+clear
+fish
+paru -S tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux
+cd
+clear
+nvim .tmux.conf/
+ls
+rm -rf .tmux.conf/
+nvim .tmux.conf
+clear
+nvim .tmux.conf
+cleaer
+clear
+tmux
+tmux
+nvim .tmux.conf
+tmux
+tmux
+clear
+tmux
+gemini
+nvim .tmux.conf
+exit
+nvim .tmux.conf
+gemini
+clear
+cd .config/tmux/
+ls
+clear
+nvim tmux.conf
+nvim tmux.reset.conf
+mcd scripts
+ls
+cd scripts
+nvim cal.sh
+chmod +x cal.sh
+clear
+cd ..
+cd
+rm -rf .tmux.conf
+rm -rf .tmux/
+ls
+clear
+exit
+tmux
+exit
+kill-server tmux
+tmux kill-server
+tmux
+exit
+tmux
+clear
+exit
+clear
+exit
+tmux
+fzf
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+fzf
+clear
+exit
+nvim .config/tmux/tmux.conf .config/tmux/tmux.reset.conf
+clear
+exit
+clear
+which tmux
+clear
+exit
+clear
+ls
+clear
+exit
+nvim .config/ghostty/config
+exit
+exit
+exit
+tmux
+exit
+eit
+exit
+clear
+exit
+clear
+exit
+gemini
+exit
+cd .config/tmux
+ls
+clear
+ls
+cd plugins/
+ls
+cd catppuccin-tmux/
+ls
+nvim *.*
+exit
+exit
+cd .config/tmux
+ls
+clear
+nvim *.*
+exit
+nvim .config/hypr/hyprland/rules.conf
+exit
+mv Pictures/Wallpapers/* Wallpapers/
+clear
+exit
+yay -S libfprint-elanmoc2-working-git --noconfirm
+yay -Ss libfprint-elanmoc2-working-git --noconfirm
+paru -Ss libfprint-elanmoc2-working-git --noconfirm
+yay -Ss libfprint-elanmoc2-working-git --noconfirm
+yay -S libfprint-elanmoc2-working-git --noconfirm
+yay -R libfprint-git
+yay -Rf libfprint-git
+yay -h
+clear
+yay -h | bat
+yay -h | bat | less
+yay -h | nvim
+yay -R -f libfprint-git
+yay -R --force libfprint-git
+yay --force -R libfprint-git
+yay -R libfprint-git
+ls
+dmesg | grep -iE "elan|spi"
+sudo dmesg | grep -iE "elan|spi"
+exit
+nvim fingerprint_report.txt
+exit
+tmux kill-server
+exit
+sudo dmesg | grep -iE "elan|spi"
+ls
+clear
+ls
+cd homework/
+ls
+cd dir
+ls
+cd dir
+ls
+cd 🌶️/
+ls
+clear
+cd 
+clear
+ls
+rm -rf sekiro_grub_theme/
+la
+clear
+ls -al
+nvim ~/.cache/atuin/init.nu
+cd .config/atuin/
+ls
+ls -al
+exit
+nvim config.toml
+clear
+ls -al
+cd 
+ls -al
+nvim .config/atuin/config.toml
+exit
+nu
+atuin
+exit
+ls -al
+cd .config/tmux
+ls
+clear
+ls -al
+nvim tmux.conf
+nvim ../atuin/config.toml
+clear
+exit
+exit
+ls -al
+clear
+cd
+clear
+ls
+sudo dmesg | grep -iE "elan|spi"
+sudo dmesg | rg -i "elan|spi"
+exit
+nvim  fingerprint_report.txt
+exit
+update
+ls
+clear
+yay -Syyu
+exit
+rm -rf fingerprint_report.txt
+clear
+ls
+clear
+ls -al
+rm -r .zoxide.nu
+cd Down
+cd Documents/
+clear
+cd 
+cd Doc
+cler
+cd
+clear
+cdi
+exit
+ssh-keygen -t ed25519 -C "raj1512@protonmail.com" 
+cd .ssh
+nvim
+ls
+nvim id_ed25519.pub
+clear
+bash
+paru -S gh
+paru -Ss gh
+paru -Ss github-cli
+paru -S github-cli
+gh auth login
+clear

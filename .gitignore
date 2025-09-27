@@ -1,0 +1,35 @@
+# Caches and temporary files
+*cache*
+*.bak
+*.swp
+/dconf/
+/pulse/
+/session/
+
+# Package manager and tool caches
+/go/
+/npm/
+/yay/
+/paru/
+/pip/
+
+# Application-specific data that shouldn't be synced
+/Code - OSS/
+/configstore/
+/github-copilot/
+/libaccounts-glib/
+/matplotlib/
+/google-chrome/
+/chromium/
+/thorium/
+
+# Highly sensitive directories
+/ssh/
+/gnupg/
+
+# KDE specific
+/kactivitymanagerdrc
+/baloofileinformationrc
+/kdeconnect/
+/kdedefaults/
+/Trolltech.conf
