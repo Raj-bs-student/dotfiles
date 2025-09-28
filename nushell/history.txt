@@ -632,3 +632,222 @@ paru -Ss github-cli
 paru -S github-cli
 gh auth login
 clear
+gemini
+clear
+exit
+exit
+exit
+nvim .config/nushell/config.nu
+clear
+exit
+cd .config
+sl
+clear
+ls
+exit
+cdf
+exit
+clear
+exit
+exit
+ls
+clear
+pwd
+clear
+ls
+pd
+pwd
+cdi
+cd Projects
+ls
+clear
+ls
+cd
+clear
+s
+clear; ls
+clear
+ls
+cd Projects/
+ls
+clear
+ls
+cd OSS
+clear
+ls
+cleaer
+clear
+ls
+cd
+clear
+cdf
+cd '$(cdf)'
+(cdf)
+echo cdf
+echo $(cdf)
+cd | cdf
+cdf | cd
+ls
+pd
+clear
+exit
+nvim .config/nushell/config.nu
+exit
+cd $(find . -type d | fzf)
+cd (ls | get name | fzf)
+cd (exa | get name | fzf)
+cd (ls | get name | fzf)
+cd (cdf)
+def cdf [] {<\n>  let selected = (find . -type d | fzf | str trim)<\n>  if ($selected | is-empty) { return }  # Avoid null output<\n>  cd $selected  # This will use your zoxide alias<\n>}<\n>
+cdf
+ls
+clear
+cdf
+clear
+exit
+cdf
+clear
+cd
+clear
+mkd test
+mcd test
+cd 
+rm test
+ls
+clear
+exit
+nvim .config/nushell/config.nu
+exit
+cleaer
+clear
+cd
+clear
+ls
+clear
+ls
+exit
+nvim .config/nushell/config.nu
+lg
+cd 
+cd .config
+lg
+clear
+nvim .config/nushell/config.nu
+clear
+exit
+nu
+exit
+nu
+exit
+sudo sysctl kernel.unprivileged_userns_clone=1
+gemini
+exit
+exit
+pacman -Syu sudo-rs
+sudo pacman -Sy sudo-rs
+which sudo
+sudo nvim /etc/pam.d/sudo
+sudo chown root:root /etc/pam.d/sudo;sudo chmod 644 /etc/pam.d/sudo
+sudo-rs -v  # Should prompt for password<\n>sudo-rs whoami  # Should return "root"<\n>
+clear
+sudo-rs whoami
+clear
+sudo ln -s /etc/pam.d/sudo /etc/pam.d/sudo-i
+sudo whoami
+clear
+which sudo
+sudo ln -s /usr/bin/sudo-rs /usr/local/bin/sudo<\n>
+$env.PATH | split row ":"<\n>
+which sudo
+sudo-rs whoami
+sudo whoami
+/usr/bin/sudo whoami
+clear
+$env.PATH = ($env.PATH | prepend "/usr/local/bin")<\n>
+$env.PATH | split row ":"
+source ~/.config/nushell/env.nu<\n>
+$env.PATH | split row ":"
+sudo -v
+exit
+exit
+ls
+clear
+which initramfs
+clear
+exit
+sudo pacman -S clamav<\n>
+sudo freshclam
+sudo systemctl enable --now clamav-freshclam.service<\n>sudo systemctl enable --now clamav-daemon.service<\n>
+sudo pacman -S libfido2 pam-u2f  # For FIDO2 and PAM integration<\n>
+exit
+clamscan -r /home/noir
+exit
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+exit
+hi
+clear
+exit
+cd .config/tmux
+l
+clear
+ls
+cd
+ls
+mv tmux_cheatsheet.md .config/tmux/
+cd .config/tmux
+ls
+cd .config/tmux
+ls
+kill-server tmux
+gemini
+clear
+ls
+cleaar
+clear
+exit
+tmux-server-238919.log
+cat tmux-server-238919.log
+clear
+cat tmux-server-238919.log
+clear
+exit
+tmux -v new-session
+exit
+exit
+tmux -v new-session
+exit
+tmux kill-server
+tmux
+exit
+tmux kill-server
+exit
+tmux -v new-session
+tmux kill-server
+exit
+tmux new-session
+zsh
+clear
+exit
+bash
+clear
+exit
+gemini
+clear
+kitty
+clear
+exit
+exit
+cd .config/tmux
+nvim tmux.reset.conf
+gemini
+cd
+cd .config
